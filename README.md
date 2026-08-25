@@ -85,7 +85,9 @@
 - **Time Window:** Hoàn tất trong vòng **10 phút** kể từ Start Event (ngay trong phiên tương tác đầu tiên).
   - *Căn cứ xác định 10 phút:* Dựa trên phân phối thời gian thực tế của chat-based customer support (P90 của một phiên tự phục vụ chuẩn thường kéo dài 3–7 phút theo benchmark ngành e-commerce CSKH). Ngưỡng 10 phút là khoảng thời gian tối ưu cho phép khách hàng gõ mô tả, đọc phản hồi và thực hiện thao tác xác nhận trước khi phiên bị timeout hoặc rơi vào trạng thái drop-off.
 - **Công thức đo:**
-  $$\text{Activation Rate} = \frac{\text{Số người dùng đạt solution\_accepted trong 10 phút}}{\text{Tổng số người dùng gửi tin nhắn sự cố lần đầu}} \times 100\%$$
+  ```text
+  Activation Rate = (Số người dùng đạt solution_accepted trong 10 phút / Tổng số người dùng gửi tin nhắn sự cố lần đầu) * 100%
+  ```
 
 ### 2. Engagement Metric (Tương tác):
 - **Góc đo 1 - Depth (Độ sâu / Hiệu quả dứt điểm):** **First Contact Resolution Rate (FCR)** — Tỷ lệ phiên sự cố được AI giải quyết dứt điểm ngay trong lượt trao đổi đầu tiên mà người dùng không cần khiếu nại lại trong 24h.
@@ -93,8 +95,11 @@
 
 ### 3. North Star Metric (NSM):
 - **Công thức 3 thành phần:**
-  $$\text{NSM} = \text{Unit of Value (Sự cố được giải quyết)} + \text{Quality Threshold (Không chuyển nhân viên, CSAT } \ge 4/5 \text{ \& RAG Groundedness } \ge 98\%) + \text{Frequency (Hàng tháng)}$$
+  ```text
+  NSM = Unit of Value (Sự cố được giải quyết) + Quality Threshold (Không chuyển nhân viên, CSAT >= 4/5, RAG Groundedness >= 98%) + Frequency (Hàng tháng)
+  ```
 - **Tên chỉ số:** **Monthly High-Quality AI-Resolved Issues** (*Số lượng sự cố đơn hàng được AI giải quyết chất lượng cao hàng tháng*).
+
 
 ### 4. Leading Indicators (Chỉ số dẫn dắt & Vận hành):
 1. **First Response Time (FRT) < 5s & API Latency p95 < 2.5s:**
